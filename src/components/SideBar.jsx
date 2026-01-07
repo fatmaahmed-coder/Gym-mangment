@@ -1,62 +1,54 @@
-
-import React from 'react';
-
+import { NavLink } from "react-router-dom";
 
 export default function Sidebar() {
   return (
-    <div
-      className="text-white position-fixed top-0 start-0 vh-100 p-4  text-start fw-bold border "
-      style={{ width: '260px' }}>
-      <div className="d-flex ">
-        <i
-          className="fa-solid fa-dumbbell me-2 "
-          style={{
-            fontSize: '23px',
-            color: '#000',
-            position: 'relative',
-            top: "5px",
-            // color: 'transparent',
-            // WebkitTextStroke: '1.5px white'
-
-          }}></i>
+    <aside className="sidebar" id="sideBar">
+      <div className="d-flex align-items-center mb-4">
+        <i className="fa-solid fa-dumbbell me-2 fs-4 text-dark"></i>
         <div>
-          <h3 className="fw-bold  text-dark">GymFlow</h3>
-          
-          <p className='text-muted'>Admin Portal</p>
+          <h4 className="fw-bold text-dark mb-0">GymFlow</h4>
+          <small className="text-muted">Admin Portal</small>
         </div>
       </div>
-      <hr className='text-muted' />
 
-      <ul className="nav nav-pills  mt-5 flex-column gap-3">
-        <li className="nav-item">
-          <a className="nav-link active text-muted " href="#">
+      <hr />
+
+      <ul className="nav flex-column gap-2 mt-4">
+        <li>
+          <NavLink to="/dashboard" className="nav-link">
             <i className="bi bi-house me-3"></i>
-            Dashboard</a>
+            Dashboard
+          </NavLink>
         </li>
-        <li className="nav-item">
-          <a className="nav-link text-muted" href="#">
+
+        <li>
+          <NavLink to="/members" className="nav-link">
             <i className="bi bi-people me-3"></i>
-            Members</a>
+            Members
+          </NavLink>
         </li>
-        <li className="nav-item">
-          <a className="nav-link text-muted" href="#">
+
+        <li>
+          <NavLink to="/trainers" className="nav-link">
             <i className="bi bi-person-check me-3"></i>
-            Trainers</a>
+            Trainers
+          </NavLink>
         </li>
-        <li className="nav-item">
-          <a className="nav-link text-muted" href="#">
+
+        <li>
+          <NavLink to="/plans" className="nav-link">
             <i className="bi bi-credit-card me-3"></i>
-            Plans</a>
+            Plans
+          </NavLink>
         </li>
-        <li className="nav-item">
-          <a className="nav-link text-muted" href="#">
+
+        <li>
+          <NavLink to="/sessions" className="nav-link">
             <i className="bi bi-calendar me-3"></i>
-            Sessions</a>
+            Sessions
+          </NavLink>
         </li>
       </ul>
-    </div>
+    </aside>
   );
 }
-
-
-

@@ -1,0 +1,39 @@
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Sidebar */
+#sideBar {
+  width: 260px;
+  flex-shrink: 0;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 90px 30px 30px; /* عشان الـ navbar */
+}
+.navbar-admin {
+  position:fixed;
+  top: 0;
+  left: 260px; /* نفس عرض الـ sidebar */
+  right: 0;
+  height: 77px;
+
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+
+  padding: 0 30px;
+  z-index: 1000;
+}
+.card{
+   background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
