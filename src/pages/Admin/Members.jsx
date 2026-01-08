@@ -40,7 +40,7 @@ export default function Members() {
           </div>
           <div id="content">
             <div className="card card">
-              <h5 className=" d-flex justify-content-start ">Member list {}</h5>
+              <h5 className=" d-flex justify-content-start ">Member list {members.length}</h5>
               <table className="table  table-hover mt-3">
                 <thead>
                   <tr>

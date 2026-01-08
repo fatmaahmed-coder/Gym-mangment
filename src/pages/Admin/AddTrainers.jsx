@@ -4,6 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import "../../style/form.css";
+import api from "../../api/axios";
 
 export default function AddMembers() {
   const validationSchema = Yup.object({
@@ -24,9 +25,9 @@ export default function AddMembers() {
     text={"Add your trainers"}>
       <div className="auth-container">
         <div className="auth-card p-4">
-          <h2 className="text-center">Sign Up To GymFlow</h2>
+          <h2 className="text-center"></h2>
           <p className="text-center text-muted mb-4">
-            Create a new member account
+            Create a new Trainer account
           </p>
 
           <Formik
@@ -42,7 +43,7 @@ export default function AddMembers() {
             }}
             validationSchema={validationSchema}
             onSubmit={(values) => {
-              axios
+              api
                 .post("http://localhost:8000/api/trainers/add", values)
                 .then((res) => console.log(res.data))
                 .catch((err) => console.log(err));
