@@ -14,32 +14,47 @@ import EditPlan from "./pages/Admin/EditPlan";
 import Session from "./pages/Admin/Session";
 import AddSession from "./pages/Admin/AddSession";
 import EditSession from "./pages/Admin/EditSession";
+import MemberDashboard from "./pages/Member/MemberDashboard";
+import Membership from "./pages/Member/Membership";
+import MemberSessions from "./pages/Member/MemberSessions";
+import BookSession from "./pages/Member/BookSession";
+import Progress from "./pages/Member/Progress";
+import Profile from "./pages/Member/Profile";
+
 function App() {
   return (
     <>
-    
+
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register/>}/>
-        <Route path="/dashboard" element={<Dashboard/>}/>
-        <Route path="/members" element={<Members/>} />
-        <Route path="/members/add" element={<AddMember/>}/>
-        <Route path="/members/edit" element={<EditMembers/>}/>
-        <Route path="/trainers" element={<Trainers/>}/>
-        <Route path="/trainers/add" element={<AddTrainer/>}/>
-        <Route path="/trainers/edit" element={<EditTrainer/>}/>
-        <Route path="/plans" element={<Plans/>}/>
-        <Route path="/plans/add" element={<AddPlan/>}/>
-        <Route path="/plans/edit" element={<EditPlan/>}/>
-        <Route path="/sessions" element={<Session/>}/>
-        <Route path="/sessions/add" element={<AddSession/>}/>
-        <Route path="/sessions/edit" element={<EditSession/>}/>
+        <Route path="/register" element={<Register />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/members" element={<Members />} />
+        <Route path="/members/add" element={<AddMember />} />
+        <Route path="/members/edit" element={<EditMembers />} />
+        <Route path="/trainers" element={<Trainers />} />
+        <Route path="/trainers/add" element={<AddTrainer />} />
+        <Route path="/trainers/edit" element={<EditTrainer />} />
+        <Route path="/plans" element={<Plans />} />
+        <Route path="/plans/add" element={<AddPlan />} />
+        <Route path="/plans/edit" element={<EditPlan />} />
+        <Route path="/sessions" element={<Session />} />
+        <Route path="/sessions/add" element={<AddSession />} />
+        <Route path="/sessions/edit" element={<EditSession />} />
+
+        <Route path="/memberdashboard" element={<MemberDashboard />} />
+        <Route path="/membership" element={<Membership />} />
+        <Route path="/membersessions" element={<MemberSessions />} />
+        <Route path="/booksession" element={<BookSession />} />
+        <Route path="/progress" element={< Progress />} />
+        <Route path="/profile" element={< Profile />} />
 
 
-        
+
+
       </Routes>
-      
     </>
+
   );
 }
 
